@@ -9,6 +9,10 @@
         abstract public function shot();
         abstract public function displayShots();
 
+        public function __construct() {
+            echo "Camera turned on." . PHP_EOL;
+        }
+
         public function setAperture($aperture) {
 
             $this->aperture = $aperture;
