@@ -8,6 +8,7 @@
     $digitalCamera = new Camera\Digital();
     $analogCamera = new Camera\Analog();
 
+    // test digital camera
     echo "Photographer with DIGITAL camera taking shots: " . PHP_EOL;
 
     for ($i = 1; $i <= 20; $i++) {
@@ -18,5 +19,13 @@
 
     echo PHP_EOL . PHP_EOL;
 
+    // test analog camera
+    echo "Photographer with ANALOG camera taking shots: " . PHP_EOL;
+
+    for ($i = 1; $i <= 20; $i++) {
+        $analogCamera->shot();
+    }
+
+    $analogCamera->displayShots();
 
 ?>

@@ -11,7 +11,7 @@
         public function displayShots() {
             echo "Opening film...";
 
-            throw new Exception("You've light a film!!! Never open it on the light.");
+            throw new \Exception("You've light a film!!! Never open it on the light.");
         }
 
     }
