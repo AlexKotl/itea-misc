@@ -23,9 +23,19 @@
     echo "Photographer with ANALOG camera taking shots: " . PHP_EOL;
 
     for ($i = 1; $i <= 20; $i++) {
-        $analogCamera->shot();
+        try {
+            $analogCamera->shot();
+        }
+        catch (Exception $e) {
+            echo "Fail: {$e->getMessage()}" . PHP_EOL;
+        }
     }
 
-    $analogCamera->displayShots();
+    try {
+        $analogCamera->displayShots();
+    }
+    catch (Exception $e) {
+        echo "Fail: {$e->getMessage()}" . PHP_EOL;
+    }
 
 ?>
